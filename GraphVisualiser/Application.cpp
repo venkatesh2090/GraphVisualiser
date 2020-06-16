@@ -75,7 +75,7 @@ int main() {
 	
 	Plot plot1(window, PlotColor(110, 144, 22)), plot2(window, PlotColor(183, 66, 168)), plot3(window, PlotColor(231, 186, 24)), plot4(window, PlotColor(189, 208, 57)), plot5(window);
 
-	Shader program("../Shaders/vertexShader.vert", "../Shaders/fragmentShader.frag");
+	Shader program("Shaders/vertexShader.vert", "Shaders/fragmentShader.frag");
 
 	glBindVertexArray(0);
 
