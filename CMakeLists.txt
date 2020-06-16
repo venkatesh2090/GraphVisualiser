@@ -32,6 +32,7 @@ list(APPEND EXTRA_LIBS glfw)
 
 # GLM dependencies
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/glm")
+list(APPEND EXTRA_LIBS glm)
 
 # GLAD dependencies
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/glad")
