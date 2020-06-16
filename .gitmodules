@@ -4,3 +4,6 @@
 [submodule "Dependencies/exprtk"]
 	path = Dependencies/exprtk
 	url = https://github.com/ArashPartow/exprtk.git
+[submodule "Dependencies/glfw"]
+	path = Dependencies/glfw
+	url = https://github.com/glfw/glfw
