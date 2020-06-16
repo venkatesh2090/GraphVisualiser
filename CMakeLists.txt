@@ -12,6 +12,13 @@ add_executable(GraphVisualiser
 			   "GraphVisualiser/shader.h"
 			  )
 
+
+if (WIN32)
+	target_compile_options(GraphVisualiser PRIVATE "/bigobj")
+endif()
+
+
+file(COPY "${PROJECT_SOURCE_DIR}/GraphVisualiser/Shaders" DESTINATION "${PROJECT_BINARY_DIR}")
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 set(OpenGL_GL_PREFERENCE GLVND)
 
