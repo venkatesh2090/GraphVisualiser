@@ -343,3 +343,4 @@ healthchecksdb
 build
 .clangd
 compile_commands.json
+CMakeSettings.json
