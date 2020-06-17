@@ -18,11 +18,6 @@ endif()
 
 file(COPY "${PROJECT_SOURCE_DIR}/GraphVisualiser/Shaders" DESTINATION "${PROJECT_BINARY_DIR}")
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
-set(OpenGL_GL_PREFERENCE GLVND)
-
-find_package(OpenGL REQUIRED)
-target_include_directories(GraphVisualiser PRIVATE ${OPENGL_INCLUDE_DIR})
-list(APPEND EXTRA_LIBS ${OPENGL_LIBRARIES})
 
 # GLFW dependencies
 set(GLFW_SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/glfw")
