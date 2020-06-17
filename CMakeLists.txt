@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 project(GraphVisualiser VERSION 1.0)
 
-option(OPENGL_D ON)
-
 add_executable(GraphVisualiser 
 			   "GraphVisualiser/Application.cpp"
 			   "GraphVisualiser/plot.cpp"
@@ -23,9 +21,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 set(OpenGL_GL_PREFERENCE GLVND)
 
 find_package(OpenGL REQUIRED)
-include_directories(${OPENGL_INCLUDE_DIR})
+target_include_directories(GraphVisualiser PRIVATE ${OPENGL_INCLUDE_DIR})
 list(APPEND EXTRA_LIBS ${OPENGL_LIBRARIES})
-message(STATUS "${OPENGL_LIBRARIES} ${OPENGL_INCLUDE_DIR}")
 
 # GLFW dependencies
 set(GLFW_SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/glfw")
