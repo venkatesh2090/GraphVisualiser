@@ -8,6 +8,15 @@
 - exprtk
 
 ## Building
+Note:
+  Please clone the repository using
+  ```bash
+  git clone --recurse-submodules https://github.com/venkatesh2090/GraphVisualiser
+  ```
+  If not pull the submodules using
+  ```bash
+  git submodule update --init
+  ```
 - Linux
   ```bash
   mkdir build
