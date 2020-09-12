@@ -15,6 +15,9 @@ if (WIN32)
 	target_compile_options(GraphVisualiser PRIVATE "/bigobj")
 endif()
 
+if (NOT EXISTS ${PROJECT_SOURCE_DIR}/Dependencies/glm/CMakeLists.txt  AND NOT EXISTS ${PROJECT_SOURCE_DIR}/Dependencies/exprtk/CMakeLists.txt AND NOT EXISTS ${PROJECT_SOURCE_DIR}/Dependencies/glfw/CMakeLists.txt)
+	message(FATAL_ERROR "Please run \n\"git submodule update --init\"")
+endif()
 
 file(COPY "${PROJECT_SOURCE_DIR}/GraphVisualiser/Shaders" DESTINATION "${PROJECT_BINARY_DIR}")
 
