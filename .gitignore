@@ -347,3 +347,6 @@ CMakeSettings.json
 
 #vscode
 .vscode/
+
+#output directory
+out/
