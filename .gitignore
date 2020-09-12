@@ -344,3 +344,6 @@ build
 .clangd
 compile_commands.json
 CMakeSettings.json
+
+#vscode
+.vscode/
