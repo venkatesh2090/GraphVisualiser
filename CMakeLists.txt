@@ -17,7 +17,11 @@ endif()
 
 
 file(COPY "${PROJECT_SOURCE_DIR}/GraphVisualiser/Shaders" DESTINATION "${PROJECT_BINARY_DIR}")
+
+set(SHADER_PATH "${PROJECT_BINARY_DIR}/Shaders")
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+
+configure_file(GraphVisualiser/GraphVisualiser.h.in GraphVisualiser.h)
 
 # GLFW dependencies
 set(GLFW_SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/glfw")
@@ -39,4 +43,5 @@ list(APPEND EXTRA_LIBS glad)
 
 target_link_libraries(GraphVisualiser PRIVATE ${EXTRA_LIBS})
 
-target_include_directories(GraphVisualiser PRIVATE "Dependencies/exprtk")
+target_include_directories(GraphVisualiser PRIVATE "Dependencies/exprtk"
+													${PROJECT_BINARY_DIR})

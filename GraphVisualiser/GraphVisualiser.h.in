@@ -1,0 +1,4 @@
+#define GraphVisualiser_VERSION_MAJOR @GraphVisualiser_VERSION_MAJOR@
+#define GraphVisualiser_VERSION_MINOR @GraphVisualiser_VERSION_MINOR@
+#define VERTEX_SHADER_PATH "@SHADER_PATH@/vertexShader.vert"
+#define FRAGMENT_SHADER_PATH "@SHADER_PATH@/fragmentShader.frag"
